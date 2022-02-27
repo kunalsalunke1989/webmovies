@@ -68,6 +68,7 @@ function App() {
       })
       setCarouselData(newCarousalData);
     }
+    carousel.current.goTo(0);//Explicitly set page number to 1
     setSelectedMovieIndex(0);
   }
 
@@ -80,7 +81,7 @@ function App() {
         <MovieMetadata metadata={carouselData[selectedMovieIndex]}></MovieMetadata>
         <GenreDropdownContainer genreData={genreData} filterMovies={filterMovies}></GenreDropdownContainer>
         <div className="carousel-wrapper">
-          <Carousel breakPoints={breakPoints}>
+          <Carousel breakPoints={breakPoints} ref={carousel}>
             {carouselData.map((item, index) => (
               <MoviePoster key={item.Id} img={item.Poster} index={index} setSelectedMovieIndex={setSelectedMovieIndex}>{item.Title}</MoviePoster>
             ))}

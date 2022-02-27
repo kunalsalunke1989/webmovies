@@ -72,6 +72,8 @@ h1{
 
 .MovieMetadata li{
   text-align: left;
+  list-style: none;
+  line-height: 2rem;
 }
 
 .metadata{
@@ -141,6 +143,8 @@ select {
     margin: 30px 50px;
   }
 }
+
+
 
 
 
