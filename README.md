@@ -38,7 +38,7 @@ http://localhost:3000
 * Clicking on any movie poster name in the carousel will show more details about the movie in the panels above. This includes a larger poster of the movie, it's title and other metadata.
 * The number of movies shown in the carousel can be filtered according to Genre with the help of the Genre dropdown.
 * The UI follows the following breakpoints for responsiveness:
-  * Mobile phones (screen width less than 481 pixels): Layout as per second mockup
+  * Mobile phones (screen width less than 481 pixels): Layout as per second mockup. Use Chrome's built in "Device toolbar" in "Developer tools" to get to this resolution. 
   * Tablets (screen width greater than 480 pixels but less than 769 pixels): Layout as per first mockup with at the most 3 carousel items  
   * Desktops (screen width greater than 768 pixels): Layout as per first mockup with at the most 6 carousel items
 * The UI uses CSS Grid to make it responsive on all resolutions.
