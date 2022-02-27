@@ -7,7 +7,7 @@ html, body, .App, #root{
 /*Use CSS Grid layout*/
 
 .App {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   text-align: center;
   margin: 5px 5px;
   display: grid;
@@ -45,8 +45,63 @@ html, body, .App, #root{
   grid-area: carousel;
 }
 
-.component{
+/*.component{
   border: 1px solid black;
+}*/
+
+h1{
+  margin: 0;
+}
+
+/*Show plot in Title of mobile devices*/
+.Title .plot{
+  display: block;
+  margin: 5px 0;
+}
+
+/*Hide plot in MovieMetadata of mobile devices*/
+.MovieMetadata .plot{
+  display: none;
+}
+
+.SelectedMoviePoster img{
+  display: flex;
+  height: 100%; 
+  width: 100%;
+}
+
+.MovieMetadata li{
+  text-align: left;
+}
+
+.metadata{
+  font-weight: 700;
+}
+
+select {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.MoviePoster{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  color: #fff;
+  margin: 15px;
+  max-width: 202px;
+  border: 1px solid transparent;
+}
+
+.MoviePoster img{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
 /*Media queries for tablets and above*/
@@ -62,6 +117,21 @@ html, body, .App, #root{
       "genre genre"
       "carousel carousel"
   }
+
+  /*Hide plot in Title*/
+  .Title .plot{
+    display: none;
+  }
+  
+  /*Show plot in MovieMetadata*/
+  .MovieMetadata .plot{
+    display: list-item;
+  }
+
+  select {
+    width: auto;
+    float: right;
+  }
 }
 
 /*Media queries for desktops and above*/
@@ -71,4 +141,6 @@ html, body, .App, #root{
     margin: 30px 50px;
   }
 }
+
+
 

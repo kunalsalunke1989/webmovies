@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SelectedMoviePoster() {
+function SelectedMoviePoster(props) {
     return (
         <div className="SelectedMoviePoster component">
-            SelectedMoviePoster
+            <img src={props.img} alt=""/>
         </div>
     )
 }

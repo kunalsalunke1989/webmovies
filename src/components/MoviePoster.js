@@ -1,9 +1,9 @@
 import React from 'react';
 
-function MoviePoster() {
+function MoviePoster(props) {
     return (
         <div className="MoviePoster component">
-            MoviePoster
+            <img src={props.img} alt="" onClick={() => props.setSelectedMovieIndex(props.index)}/>
         </div>
     )
 }
