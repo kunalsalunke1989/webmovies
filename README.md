@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Web Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React app which uses an external movies API to show list of movies in a carousel. Clicking on any movie in the carousel will show its details in the panels above it. 
 
-## Available Scripts
+### Prerequisites
 
-In the project directory, you can run:
+Following should be installed before running the project
 
-### `npm start`
+```
+Node 
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install necessary dependencies
 
-### `npm test`
+```
+npx create-react-app checklist
+npm install --save react-elastic-carousel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+2. To run the project locally using npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
+```
+3. Navigate to the following URL to launch app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Web Movies Features
+* The landing page shows a list of movies in a carousel which is created using the following plugin: https://www.npmjs.com/package/react-elastic-carousel.
+* The "Prev" and "Next" buttons can be used to navigate through the carousel.
+* Each item contains the movie's poster.
+* Clicking on any movie poster name in the carousel will show more details about the movie in the panels above. This includes a larger poster of the movie, it's title and other metadata.
+* The number of movies shown in the carousel can be filtered according to Genre with the help of the Genre dropdown.
+* The UI follows the following breakpoints for responsiveness:
+  * Mobile phones (screen width less than 481 pixels): Layout as per second mockup
+  * Tablets (screen width greater than 480 pixels but less than 769 pixels): Layout as per first mockup with at the most 3 carousel items  
+  * Desktops (screen width greater than 768 pixels): Layout as per first mockup with at the most 6 carousel items
+* The UI uses CSS Grid to make it responsive on all resolutions.
+* Assumption as per mock up: The title panel will contain the movie plot for mobile devices while for larger devices it will be shown in the metadata panel.
