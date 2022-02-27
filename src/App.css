@@ -1,38 +1,74 @@
+/*Use mobile first approach for styling elements*/
+
+html, body, .App, #root{
+  height: 97%;
+}
+
+/*Use CSS Grid layout*/
+
 .App {
+  border: 1px solid red;
   text-align: center;
+  margin: 5px 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-rows: 0.1fr 1fr auto auto;
+  grid-template-areas: 
+    "title title"
+    "poster metadata"
+    "genre genre"
+    "carousel carousel"
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Define Grid areas*/
+
+.Title{
+  grid-area: title;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.SelectedMoviePoster{
+  grid-area: poster;
+  border: 1px solid black;
+}
+
+.MovieMetadata{
+  grid-area: metadata;
+}
+
+.GenreDropdownContainer{
+  grid-area: genre;
+}
+
+.carousel-wrapper{
+  grid-area: carousel;
+}
+
+.component{
+  border: 1px solid black;
+}
+
+/*Media queries for tablets and above*/
+
+@media (min-width: 481px) {
+  .App {
+    margin: 10px 20px;
+    grid-template-columns: 0.5fr 2fr;
+    grid-column-gap: 40px;
+    grid-template-areas: 
+      "poster title"
+      "poster metadata"
+      "genre genre"
+      "carousel carousel"
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*Media queries for desktops and above*/
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 769px) {
+  .App {
+    margin: 30px 50px;
   }
 }
+
